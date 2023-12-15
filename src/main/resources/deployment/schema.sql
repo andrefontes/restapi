@@ -7,10 +7,13 @@ first_name VARCHAR(20) NOT NULL,
 last_name VARCHAR(20) NOT NULL,
 age INTEGER NOT NULL 
 );
-
+*/
 
 -- drop database dass21_db WITH ( FORCE );
--- CREATE DATABASE dass21_db WITH OWNER = postgres;
+--CREATE DATABASE dass21_db WITH OWNER = postgres;
+    --CREATE DATABASE dass21_db;
+
+/*
 
 -- Criação da tabela Participantes
 CREATE TABLE IF NOT EXISTS Participantes (
