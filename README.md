@@ -1,6 +1,40 @@
 # PROVA FIESC - Spring Boot REST
 
 ## Instruções 
+Primeiro execute ese comando para verificar as dependencias do projeto:
+```
+mvn test
+```
+
+Verificar a versão do java:
+```
+java --version
+```
+Verificar a versão do maven:
+```
+mvn --version
+```
+
+## Possíveis erros:
+pom.xml
+```
+  <properties>
+      <java.version>21</java.version>
+  </properties>
+```
+<i>Versão do java, indicada pela variável de ambiente <b>JAVA_HOME</b> NUNCA pode ser menor que indicada no arquivo <b>pom.xml</b></i><br />
+Exemplo:<br />
+JAVAHOME = C:\Program Files\Java\jdk-<b>20</b><br />
+Versão do jdk instalada é menor que a versao usada / definida no arquivo pom.xml<br />
+
+### Solução:
+- Acesse o site, enconte a versão necessária, nesse caso a "21": https://jdk.java.net/21/
+- Baixe a versão Windows / x64 ou 32 (zip) 
+- Extraia o arquivo (openjdk-21.0.1_windows-x64_bin.zip) na pasta "C:\Program Files\Java"
+- Atualize a variável JAVA_HOME para : C:\Program Files\Java\jdk\jdk-21.0.1
+- Reinicie a máquina, caso necessário
+
+
 
 ### Database :
 Criar uma base de dados com nome "dass21_db"
