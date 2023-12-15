@@ -1,24 +1,19 @@
 package com.fiesc.restapi.database;
 
-import java.util.ArrayList;
+import java.util.List;
 
-import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fiesc.restapi.database.RepositorioParticipante;
+
 import com.fiesc.restapi.entidade.Participante;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 // Definiremos aqui o servidor REST que tem a interface desacoplada
 // Assim, idependente da tecnologia ou plataforma utilizada, pode ser web, desktop, mobile, etc.
@@ -37,19 +32,17 @@ public class ParticipanteREST {
     @Autowired
     private RepositorioParticipante repositorio;
         
-    /*
+    
     @GetMapping
     public List<Participante>listar(){
         return repositorio.findAll();
     }
-     */
-    
-   /*
-     @GetMapping(value = "/{id}")
+
+    @GetMapping(value = "/{id}")
     public List<Participante> findById(@RequestBody Participante participante) {
         return repositorio.findAll();
     }
-    */
+    
    
     // @RequestBody converte json para objeto java
 
@@ -58,11 +51,11 @@ public class ParticipanteREST {
         repositorio.save(participante);
     }
 
-    @PutMapping(value = "/{id}")
+    @PutMapping
     public void alterar(@RequestBody Participante participante){
-        if(participante.getId() > 0) {
+        //if(participante.getId() > 0) {
             repositorio.save(participante);
-        }
+        //}
     }
 
     @DeleteMapping

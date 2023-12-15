@@ -1,24 +1,18 @@
 package com.fiesc.restapi.database;
 
-import java.util.ArrayList;
+import java.util.List;
 
-import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fiesc.restapi.database.RepositorioContato;
 import com.fiesc.restapi.entidade.Contato;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 // Definiremos aqui o servidor REST que tem a interface desacoplada
 // Assim, idependente da tecnologia ou plataforma utilizada, pode ser web, desktop, mobile, etc.
@@ -31,26 +25,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequestMapping(value = "/contato") // Vincular uma url
 public class ContatoREST {
     // Aqui, ao invés de criar o objeto manualmente, iremos delegar essa tarefa ao Sring, através da injeção de dependência
-    // Dessa forma, o Spring cria o objeto e injeta aqui no atributo e cuida dele, gerenciando seu cilclo de vida, fica muito mais fácil.
+    // Dessa forma, o Spring cria o objeto e injeta aqui no atributo e cuida dele, gerenciando seu ciclo de vida, fica muito mais fácil.
     // Temos um objeto que tem todas as operações basicas para manipular o contato em banco de dados, podemos definir aqui os métodos (salvar, alterar, excluir e consultar)
     // Definir atributo:
     @Autowired
     private RepositorioContato repositorio;
-        
-    /*
+
     @GetMapping
     public List<Contato>listar(){
         return repositorio.findAll();
     }
-     */
-    
-   /*
-     @GetMapping(value = "/{id}")
+
+    @GetMapping(value = "/{id}")
     public List<Contato> findById(@RequestBody Contato contato) {
         return repositorio.findAll();
     }
-    */
-   
+  
     // @RequestBody converte json para objeto java
 
     @PostMapping
