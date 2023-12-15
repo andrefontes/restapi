@@ -29,6 +29,7 @@ public class Resposta {
     
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @Column(name = "id") 
     private Long id;
 
     //@Basic(optional = false)
@@ -42,18 +43,18 @@ public class Resposta {
     private String data_resposta;
 
 
-    @Column(name = "pontuacao_total_depressao", nullable = false)
+    @Column(name = "pontuacao_total_depressao", nullable = false) 
     private Integer pontuacao_total_depressao;
 
-    @Column(name = "pontuacao_total_ansiedade", nullable = false)
+    @Column(name = "pontuacao_total_ansiedade", nullable = false) 
     private Integer pontuacao_total_ansiedade;
 
-    @Column(name = "pontuacao_total_estresse", nullable = false)
+    @Column(name = "pontuacao_total_estresse", nullable = false) 
     private Integer pontuacao_total_estresse;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "participante_id")
+    @JoinColumn(name = "participante_id") 
     private Participante participante;
 
 
