@@ -3,6 +3,8 @@
 ## Instruções 
 Primeiro execute ese comando para verificar as dependencias do projeto:
 ```
+mvn clean dependency:tree
+mvn clean compile
 mvn test
 ```
 
