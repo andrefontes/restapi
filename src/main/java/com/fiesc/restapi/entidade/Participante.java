@@ -126,8 +126,6 @@ public class Participante {
     public List<Resposta> getResposta() {
         return resposta;
     }
-
-
     
 }
 

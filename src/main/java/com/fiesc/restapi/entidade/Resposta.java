@@ -106,7 +106,6 @@ public class Resposta {
         return pontuacao_total_estresse;
     }
 
-
     public void setPontuacao_total_estresse(Integer pontuacao_total_estresse) {
         this.pontuacao_total_estresse = pontuacao_total_estresse;
     }
