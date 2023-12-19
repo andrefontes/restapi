@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity //Esta notação define que essa classe será uma entidade, cria automaticamente uma tabela que representa essa entidade no banco de dados
@@ -42,7 +43,7 @@ public class Participante {
     private String urlAvatar;
 
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "participante")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "participante")
     private List<Resposta> resposta;
 
 
@@ -114,15 +115,16 @@ public class Participante {
     public void setUrlAvatar(String urlAvatar) {
         this.urlAvatar = urlAvatar;
     }
-
-
-    public List<Resposta> getResposta() {
-        return resposta;
-    }
+    
 
 
     public void setResposta(List<Resposta> resposta) {
         this.resposta = resposta;
+    }
+
+
+    public List<Resposta> getResposta() {
+        return resposta;
     }
 
 

@@ -4,8 +4,8 @@
 Primeiro execute ese comando para verificar as dependencias do projeto:
 ```
 mvn clean dependency:tree
-mvn clean compile
 mvn test
+mvn clean compile
 ```
 
 Verificar a versão do java:
@@ -55,6 +55,9 @@ spring.datasource.password=123456
 
 
 ----------------------------------------------------------------
+
+
+
 
 ### Reference Documentation
 For further reference, please consider the following sections:

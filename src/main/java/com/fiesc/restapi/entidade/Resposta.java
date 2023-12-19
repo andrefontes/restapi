@@ -2,6 +2,8 @@ package com.fiesc.restapi.entidade;
 
 import java.security.Timestamp;
 import java.sql.Date;
+import java.util.HashSet;
+import java.util.Locale.Category;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.OnDelete;
@@ -17,6 +19,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -53,8 +57,8 @@ public class Resposta {
     private Integer pontuacao_total_estresse;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "participante_id") 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "participante_id")
     private Participante participante;
 
 
