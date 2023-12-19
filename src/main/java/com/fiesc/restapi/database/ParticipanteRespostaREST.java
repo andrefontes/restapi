@@ -103,9 +103,9 @@ public class ParticipanteRespostaREST {
     }
 
 
-    @RequestMapping("/api/v1/salvar-resposta-por-participante-resposta")
+    @RequestMapping("/api/v1/salvar-resposta-por-participante-resposta-1")
     @PostMapping
-    public ResponseEntity<Resposta> salvarRespostaPostParticipanteResposta(@RequestBody Resposta resposta) {
+    public ResponseEntity<Resposta> salvarRespostaPostParticipanteResposta1(@RequestBody Resposta resposta) {
         return ResponseEntity.ok(resposta);
     }
 }
