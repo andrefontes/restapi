@@ -9,7 +9,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import java.util.List;
-import java.util.Set;
 
 
 @Entity //Esta notação define que essa classe será uma entidade, cria automaticamente uma tabela que representa essa entidade no banco de dados

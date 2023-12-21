@@ -1,4 +1,4 @@
-# PROVA FIESC - Spring Boot REST
+# Spring Boot REST - BÁSICO
 
 ## Instruções 
 Primeiro execute ese comando para verificar as dependencias do projeto:
